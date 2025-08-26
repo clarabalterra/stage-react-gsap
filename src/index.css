@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coyote: #7a6653;
+  --color-alabaster: #eae6df;
+}
+
+html,
+body {
+  color: #7a6653;
+  background-color: #eae6df;
+}
