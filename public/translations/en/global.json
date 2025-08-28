@@ -1,0 +1,11 @@
+{
+  "header": {
+    "projects": "Projects",
+    "services": "Services",
+    "about": "About us"
+  },
+
+  "cta": {
+    "contact": "Book a meeting"
+  }
+}

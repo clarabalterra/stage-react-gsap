@@ -5,8 +5,34 @@
   --color-alabaster: #eae6df;
 }
 
+@font-face {
+  font-family: "NimbusSanL";
+  src: url("./assets/fonts/NimbusSanL-Regu.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
-  color: #7a6653;
-  background-color: #eae6df;
+  color: var(--color-coyote);
+  background-color: var(--color-alabaster);
+  font-family: "NimbusSanL", sans-serif;
+}
+
+@layer base {
+  button,
+  a,
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  button:hover {
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  a:hover {
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
+  }
 }

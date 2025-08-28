@@ -1,12 +1,19 @@
+import { Suspense } from "react";
+
 import NavBar from "./components/NavBar";
-import HeroSection from "./sections/HeroSection";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <main>
+    <Suspense fallback="Cargando traducciones...">
       <NavBar />
-      <HeroSection></HeroSection>
-    </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Suspense>
   );
 };
 
