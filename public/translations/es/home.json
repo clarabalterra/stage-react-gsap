@@ -5,7 +5,11 @@
     "cta": "Reserva ahora tu primera asesoría personalizada online de forma totalmente gratuita y da el primer paso hacia tus objetivos."
   },
 
+  "cta": {
+    "contact": "Reserva un meeting"
+  },
+
   "first-section": {
-    "p": "Diseñamos experiencias que elevan el valor de cada propiedad."
+    "p": "<low>Diseñamos experiencias</low> que elevan el valor de cada propiedad."
   }
 }

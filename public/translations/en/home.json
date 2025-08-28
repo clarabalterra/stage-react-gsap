@@ -5,7 +5,11 @@
     "cta": "Book your first personalized online consultation now completely free of charge and take the first step toward your goals."
   },
 
+  "cta": {
+    "contact": "Book a meeting"
+  },
+
   "first-section": {
-    "p": "We design experiences that enhance the value of every property."
+    "p": "<low>We design experiences</low> that enhance the value of every property."
   }
 }

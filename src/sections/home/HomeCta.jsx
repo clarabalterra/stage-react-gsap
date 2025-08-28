@@ -1,11 +1,17 @@
-import { useTranslation } from "react-i18next";
+import { Trans } from "react-i18next";
 
 const HomeCta = () => {
-  const { t } = useTranslation(["home"]);
-
   return (
-    <div className="flex items-center justify-center h-150">
-      <p className="text-5xl w-3/5 text-center leading-tight">{t('first-section.p')}</p>
+    <div className="flex flex-col items-center justify-center h-150 text-3xl md:text-5xl">
+      <p className="text-center leading-tight p-5 lg:w-3/6">
+        <Trans
+          i18nKey="first-section.p"
+          ns="home"
+          components={{
+            low: <span className="opacity-60" />,
+          }}
+        />
+      </p>
     </div>
   );
 };

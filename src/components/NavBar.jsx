@@ -7,33 +7,69 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { useTranslation } from "react-i18next";
 
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const NavBar = () => {
   const { t, i18n } = useTranslation(["global"]);
   const [isOpen, setIsOpen] = useState(false);
   const mobileMenuRef = useRef(null);
+  const headerRef = useRef(null);
 
+  // Animación del menú móvil
   useEffect(() => {
     if (mobileMenuRef.current) {
       if (isOpen) {
         gsap.fromTo(
           mobileMenuRef.current,
           { height: 0, opacity: 0 },
-          { height: "auto", opacity: 1, duration: 0.3, ease: "power2.out" }
+          { height: "auto", opacity: 1, duration: 0.4, ease: "power2.out" }
         );
       } else {
         gsap.to(mobileMenuRef.current, {
           height: 0,
           opacity: 0,
-          duration: 0.3,
+          duration: 0.4,
           ease: "power2.in",
         });
       }
     }
   }, [isOpen]);
 
+  // Animación del header al hacer scroll (smooth)
+  useEffect(() => {
+    const header = headerRef.current;
+    const headerHeight = header.offsetHeight;
+
+    ScrollTrigger.create({
+      start: "top top",
+      end: "max",
+      onUpdate: (self) => {
+        if (self.direction === 1 && self.scroll() > 50) {
+          // Scroll hacia abajo → esconder
+          gsap.to(header, {
+            y: -headerHeight,
+            duration: 0.8,
+            overwrite: "auto",
+          });
+        } else if (self.direction === -1) {
+          // Scroll hacia arriba → mostrar
+          gsap.to(header, {
+            y: 0,
+            duration: 0.4,
+            overwrite: "auto",
+          });
+        }
+      },
+    });
+  }, []);
+
   return (
-    <nav className="absolute w-full z-50 px-6 py-6 md:px-12 md:pt-8 text-alabaster">
+    <nav
+      ref={headerRef}
+      className="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 md:pt-8 text-alabaster bg-transparent"
+    >
       <div className="grid grid-cols-3">
         {/* Logo */}
         <div className="flex items-center">
@@ -100,9 +136,19 @@ const NavBar = () => {
         </div>
         {/* LANG */}
         <div className="flex gap-2">
-          <button onClick={() => i18n.changeLanguage("es")} className={i18n.language === "es" ? "font-bold" : ""}>ES</button>
+          <button
+            onClick={() => i18n.changeLanguage("es")}
+            className={i18n.language === "es" ? "font-bold" : ""}
+          >
+            ES
+          </button>
           <p>|</p>
-          <button onClick={() => i18n.changeLanguage("en")} className={i18n.language === "en" ? "font-bold" : ""}>EN</button>
+          <button
+            onClick={() => i18n.changeLanguage("en")}
+            className={i18n.language === "en" ? "font-bold" : ""}
+          >
+            EN
+          </button>
         </div>
         {/* CTA */}
         <Link
@@ -110,7 +156,7 @@ const NavBar = () => {
           className="bg-coyote text-alabaster rounded-4xl px-4 py-2 flex justify-center"
         >
           {t("cta.contact")}
-        </Link>{" "}
+        </Link>
       </div>
     </nav>
   );
