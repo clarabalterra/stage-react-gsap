@@ -68,9 +68,9 @@ const NavBar = () => {
   return (
     <nav
       ref={headerRef}
-      className="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-12 md:pt-8 text-alabaster bg-transparent"
+      className="fixed top-0 left-0 w-full z-50 px-6 py-6 md:px-6 text-alabaster"
     >
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-3 backdrop-blur-xs rounded-4xl px-6 py-3">
         {/* Logo */}
         <div className="flex items-center">
           <a href="/">STAGÈ</a>
