@@ -1,10 +1,12 @@
 import { useTranslation } from "react-i18next";
 import TitleSubtitle from "../../components/TitleSubtitle";
-import ServicesSlider from "./ServicesSlider";
 import Button from "../../components/Button";
+import EmblaCarousel from "../home/carousel/EmblaCarousel"
 
 const ServicesSection = () => {
   const { t } = useTranslation("home");
+
+  const options = { dragFree: true };
 
   return (
     <div>
@@ -13,10 +15,10 @@ const ServicesSection = () => {
         subtitle={t("service-slider.subtitle")}
       />
 
-      <div className="py-25">
-        <ServicesSlider />
+      <div className="pt-15">
+        <EmblaCarousel options={options} />
       </div>
-      
+
       <div className="flex justify-center">
         <Button text={t("service-btn.cta")} to="/services" />
       </div>
