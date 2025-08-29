@@ -4,13 +4,13 @@ const HomeCta = () => {
   const { i18n } = useTranslation("home"); 
 
   return (
-    <div className="flex flex-col items-center justify-center h-150 text-3xl md:text-5xl">
+    <div className="flex flex-col items-center justify-center text-3xl md:text-5xl">
       <p className="text-center leading-tight p-5 lg:w-3/6">
         <Trans
           i18nKey="first-section.p"
           ns="home"
           components={{
-            low: <span className="opacity-60" />,
+            low: <span className="opacity-70" />,
           }}
         />
       </p>

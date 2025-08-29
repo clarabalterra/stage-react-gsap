@@ -11,5 +11,14 @@
 
   "first-section": {
     "p": "<low>Diseñamos experiencias</low> que elevan el valor de cada propiedad."
+  },
+
+  "service-slider": {
+    "title": "Diseño con propósito. Resultados con impacto.",
+    "subtitle": "Transformamos espacios en oportunidades rentables que atraen a compradores cualificados."
+  },
+
+  "service-btn": {
+    "cta": "Nuestros servicios"
   }
 }
