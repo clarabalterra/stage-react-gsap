@@ -6,7 +6,7 @@ import EmblaCarousel from "../home/carousel/EmblaCarousel"
 const ServicesSection = () => {
   const { t } = useTranslation("home");
 
-  const options = { dragFree: true };
+  const options = { dragFree: false };
 
   return (
     <div>
@@ -15,7 +15,7 @@ const ServicesSection = () => {
         subtitle={t("service-slider.subtitle")}
       />
 
-      <div className="pt-15">
+      <div className="py-12">
         <EmblaCarousel options={options} />
       </div>
 

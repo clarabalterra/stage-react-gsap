@@ -1,3 +1,4 @@
+import EmblaCarousel from "../sections/home/carousel-projects/EmblaCarousel";
 import HeroSection from "../sections/home/HeroSection";
 import HomeCta from "../sections/home/HomeCta";
 import NumbersSection from "../sections/home/NumbersSection";
@@ -23,10 +24,10 @@ const Home = () => {
         <ServicesSection />
       </div>
 
-
       <div className="pt-50">
         <ProjectsSection />
       </div>
+
       <div className="pt-50">
         <NumbersSection />
       </div>

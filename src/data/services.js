@@ -1,26 +1,30 @@
-export const services = [
+import i18n from "i18next";
+
+import comprehensive from "../assets/images/services/comprehensive.webp";
+import visual from "../assets/images/services/visual-prod.webp";
+import financeable from "../assets/images/services/financeable-furniture.webp";
+import editorial from "../assets/images/services/editorial.webp";
+import sensory from "../assets/images/services/sensory.webp";
+
+export const getServices = () => [
   {
-    src: "https://picsum.photos/id/1011/800/500",
-    title: "Montaña nevada",
+    image: comprehensive,
+    title: i18n.t("services.1", { ns: "home" }),
   },
   {
-    src: "https://picsum.photos/id/1025/800/500",
-    title: "Perro curioso",
+    image: visual,
+    title: i18n.t("services.2", { ns: "home" }),
   },
   {
-    src: "https://picsum.photos/id/1003/800/500",
-    title: "Bosque tranquilo",
+    image: financeable,
+    title: i18n.t("services.3", { ns: "home" }),
   },
   {
-    src: "https://picsum.photos/id/1025/800/500",
-    title: "Perro curioso",
+    image: editorial,
+    title: i18n.t("services.4", { ns: "home" }),
   },
   {
-    src: "https://picsum.photos/id/1003/800/500",
-    title: "Bosque tranquilo",
-  },
-    {
-    src: "https://picsum.photos/id/1003/800/500",
-    title: "Bosque tranquilo",
+    image: sensory,
+    title: i18n.t("services.5", { ns: "home" }),
   },
 ];

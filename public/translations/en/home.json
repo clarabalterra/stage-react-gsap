@@ -18,7 +18,42 @@
     "subtitle": "We transform spaces into profitable opportunities that attract qualified buyers."
   },
 
+  "services": {
+    "1": "Comprehensive Home Staging",
+    "2": "Visual production",
+    "3": "Financeable furniture",
+    "4": "Editorial style",
+    "5": "Sensory styling",
+    "6": "Etc"
+  },
+
   "service-btn": {
     "cta": "Our services"
+  },
+
+  "project-slider": {
+    "title": "Projects"
+  },
+
+  "projects": {
+    "1": "Casa Oliva",
+    "2": "Aire Abierto",
+    "3": "Luz de Sierra",
+    "4": "Brisa de Mar",
+    "5": "Casa Lavanda",
+    "6": "Calma Brava"
+  },
+
+  "projects-btn": {
+    "cta": "Our projects"
+  },
+
+  "numbers-section": {
+    "title": "From investment to guaranteed value",
+    "subtitle": "We align your goals with what buyers are looking for. Then, we create staging strategies that multiply returns."
+  },
+
+  "numbers-btn": {
+    "cta": "Contact us"
   }
 }

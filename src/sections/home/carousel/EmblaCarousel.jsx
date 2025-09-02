@@ -1,6 +1,6 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { usePrevNextButtons } from "./usePrevNextButtons";
-import { services } from "../../../data/services";
+import { getServices } from "../../../data/services";
 import { PrevButton } from "./PrevButton";
 import { NextButton } from "./NextButton";
 
@@ -15,15 +15,28 @@ const EmblaCarousel = (props) => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
+  const services = getServices();
+
   return (
     <section className="">
       <div className="embla__viewport overflow-hidden" ref={emblaRef}>
-        <div className="embla__container flex -ml-6">
-          {services.map((_, index) => (
-            <div key={index} className="embla__slide pl-6 flex-[0_0_30%]">
-              <div className="embla__slide__number flex items-center justify-center h-130 select-none bg-coyote  rounded-2xl">
-                {index + 1}
-              </div>
+        <div className="embla__container flex -ml-4 md:-ml-6">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="
+          embla__slide 
+          pl-4 md:pl-6
+          flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_30%]
+        "
+            >
+              <div
+                className="h-64 md:h-80 lg:h-96 rounded-2xl bg-center bg-cover bg-no-repeat"
+                style={{ backgroundImage: `url(${service.image})` }}
+              ></div>
+              <p className="pt-3 text-lg md:text-xl lg:text-2xl">
+                {service.title}
+              </p>
             </div>
           ))}
         </div>

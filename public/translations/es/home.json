@@ -18,7 +18,42 @@
     "subtitle": "Transformamos espacios en oportunidades rentables que atraen a compradores cualificados."
   },
 
+  "services": {
+    "1": "Home Staging integral",
+    "2": "Producción visual",
+    "3": "Mobiliario hipotecable",
+    "4": "Estilo editorial",
+    "5": "Estilismo sensorial",
+    "6": "Etc"
+  },
+
   "service-btn": {
     "cta": "Nuestros servicios"
+  },
+
+  "project-slider": {
+    "title": "Proyectos"
+  },
+
+  "projects": {
+    "1": "Casa Oliva",
+    "2": "Aire Abierto",
+    "3": "Luz de Sierra",
+    "4": "Brisa de Mar",
+    "5": "Casa Lavanda",
+    "6": "Calma Brava"
+  },
+
+  "projects-btn": {
+    "cta": "Nuestros proyectos"
+  },
+
+  "numbers-section": {
+    "title": "De inversión a valor seguro",
+    "subtitle": "Alineamos tus metas con lo que buscan los compradores. Después creamos estrategias de staging que multiplican beneficios."
+  },
+
+  "numbers-btn": {
+    "cta": "Contáctanos"
   }
 }
