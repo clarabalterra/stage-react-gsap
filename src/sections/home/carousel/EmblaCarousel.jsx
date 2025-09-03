@@ -3,6 +3,7 @@ import { usePrevNextButtons } from "./usePrevNextButtons";
 import { getServices } from "../../../data/services";
 import { PrevButton } from "./PrevButton";
 import { NextButton } from "./NextButton";
+import { useTranslation } from "react-i18next";
 
 const EmblaCarousel = (props) => {
   const { options } = props;
@@ -15,7 +16,8 @@ const EmblaCarousel = (props) => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
-  const services = getServices();
+  const { t } = useTranslation("services");
+  const services = getServices(t);
 
   return (
     <section className="">
@@ -42,11 +44,9 @@ const EmblaCarousel = (props) => {
         </div>
       </div>
 
-      <div className="embla__controls grid grid-cols-[auto_1fr] justify-between gap-[1.2rem] mt-[1.8rem]">
-        <div className="embla__buttons grid grid-cols-2 gap-[0.6rem] items-center">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
+      <div className="embla__buttons flex justify-center  gap-6 pt-12">
+        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>
     </section>
   );

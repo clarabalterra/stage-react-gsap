@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import TitleSubtitle from "../../components/TitleSubtitle";
 import Button from "../../components/Button";
-import EmblaCarousel from "../home/carousel/EmblaCarousel"
+import EmblaCarousel from "../home/carousel/EmblaCarousel";
 
 const ServicesSection = () => {
   const { t } = useTranslation("home");

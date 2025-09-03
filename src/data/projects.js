@@ -1,5 +1,3 @@
-import i18n from "i18next";
-
 import oliva from "../assets/images/projects/casa-oliva.webp";
 import aire from "../assets/images/projects/aire-abierto.webp";
 import sierra from "../assets/images/projects/luz-sierra.webp";
@@ -10,26 +8,26 @@ import calma from "../assets/images/projects/calma-brava.webp";
 export const getProjects = () => [
   {
     image: oliva,
-    title: i18n.t("projects.1", { ns: "home" }),
+    title: "Casa Oliva",
   },
   {
     image: aire,
-    title: i18n.t("projects.2", { ns: "home" }),
+    title: "Aire Abierto",
   },
   {
     image: sierra,
-    title: i18n.t("projects.3", { ns: "home" }),
+    title: "Luz de Sierra",
   },
   {
     image: brisa,
-    title: i18n.t("projects.4", { ns: "home" }),
+    title: "Brisa de Mar",
   },
   {
     image: lavanda,
-    title: i18n.t("projects.5", { ns: "home" }),
+    title: "Casa Lavanda",
   },
   {
     image: calma,
-    title: i18n.t("projects.6", { ns: "home" }),
+    title: "Calma Brava",
   },
 ];

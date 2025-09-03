@@ -1,11 +1,26 @@
 {
-  "header": {
+  "nav": {
     "projects": "Projects",
     "services": "Services",
-    "about": "About us"
+    "about": "About us",
+    "contact": "Contact"
   },
 
   "cta": {
     "contact": "Book a meeting"
+  },
+
+  "seo": {
+    "contact": {
+      "title": "Contact | Stagè Mediterráneo - Free Home Staging Consultation",
+      "description": "Schedule your free online consultation with our sensory home staging experts. We analyze your case and show you how to improve the presentation and value of your property."
+    }
+  },
+
+  "footer": {
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "nav": "Useful links"
   }
 }

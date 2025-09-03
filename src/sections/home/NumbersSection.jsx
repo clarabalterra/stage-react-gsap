@@ -8,8 +8,8 @@ const NumbersSection = () => {
   return (
     <div>
       <TitleSubtitle
-        title={t("service-slider.title")}
-        subtitle={t("service-slider.subtitle")}
+        title={t("numbers-section.title")}
+        subtitle={t("numbers-section.subtitle")}
       />
 
       <div className="flex flex-col lg:flex-row px-6 lg:px-12 gap-12 py-12">

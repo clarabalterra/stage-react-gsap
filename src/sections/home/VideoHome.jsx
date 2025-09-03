@@ -10,9 +10,10 @@ const VideoHome = () => {
         <video
           src="/home-video.mp4"
           className="w-full h-full object-cover rounded-2xl"
-          controls
           autoPlay
           muted
+          playsInline
+          loop
         ></video>
       </div>
     </div>

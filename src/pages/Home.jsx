@@ -1,37 +1,56 @@
-import EmblaCarousel from "../sections/home/carousel-projects/EmblaCarousel";
+import { useTranslation } from "react-i18next";
 import HeroSection from "../sections/home/HeroSection";
 import HomeCta from "../sections/home/HomeCta";
 import NumbersSection from "../sections/home/NumbersSection";
+import Process from "../sections/home/Process";
 import ProjectsSection from "../sections/home/ProjectsSection";
 import ServicesSection from "../sections/home/ServicesSection";
 import VideoHome from "../sections/home/VideoHome";
-
+import FinalCta from "../sections/home/FinalCta";
+import TitleSubtitle from "../components/TitleSubtitle";
 
 const Home = () => {
+  const { t } = useTranslation(["home"]);
+
   return (
     <>
+      {/* Metadata SEO */}
+      <title>{t("seo.title") || "Default Home Title"}</title>
+      <meta
+        name="description"
+        content={t("seo.description") || "Default description for home"}
+      />
+
+      {/* Secciones */}
       <HeroSection />
 
-      <div className="pt-50">
+      <div className="pt-48 pb-24">
         <HomeCta />
       </div>
 
-      <div className="pt-50">
+      <div className="py-24">
         <VideoHome />
       </div>
 
-      <div className="pt-50 px-6 lg:px-12">
+      <div className="py-24 px-6 lg:px-12">
         <ServicesSection />
       </div>
 
-      <div className="pt-50">
+      <div className="py-24">
         <ProjectsSection />
       </div>
 
-      <div className="pt-50">
+      <div className="py-24">
         <NumbersSection />
       </div>
 
+      <div className="py-24">
+        <Process />
+      </div>
+
+      <div className="pb-48 pt-24 px-6 lg:px-12">
+        <FinalCta />
+      </div>
     </>
   );
 };

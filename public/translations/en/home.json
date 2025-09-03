@@ -1,4 +1,9 @@
 {
+  "seo": {
+    "title": "Stagè Mediterráneo | Sensory Home Staging to Sell and Rent Faster",
+    "description": "Specialists in sensory home staging: we transform homes into experiences that captivate. Increase the perceived value of your property and speed up its sale or rental."
+  },
+
   "hero": {
     "h1": "Ready to sell.",
     "h12": "Ready to live.",
@@ -10,7 +15,7 @@
   },
 
   "first-section": {
-    "p": "<low>We design experiences</low> that enhance the value of every property."
+    "p": "We design experiences that enhance the value of every property."
   },
 
   "service-slider": {
@@ -18,30 +23,12 @@
     "subtitle": "We transform spaces into profitable opportunities that attract qualified buyers."
   },
 
-  "services": {
-    "1": "Comprehensive Home Staging",
-    "2": "Visual production",
-    "3": "Financeable furniture",
-    "4": "Editorial style",
-    "5": "Sensory styling",
-    "6": "Etc"
-  },
-
   "service-btn": {
     "cta": "Our services"
   },
 
   "project-slider": {
-    "title": "Projects"
-  },
-
-  "projects": {
-    "1": "Casa Oliva",
-    "2": "Aire Abierto",
-    "3": "Luz de Sierra",
-    "4": "Brisa de Mar",
-    "5": "Casa Lavanda",
-    "6": "Calma Brava"
+    "title": "Results that speak for themselves"
   },
 
   "projects-btn": {
@@ -55,5 +42,38 @@
 
   "numbers-btn": {
     "cta": "Contact us"
+  },
+
+  "process-section": {
+    "title": "The journey that shapes results",
+    "subtitle": "Our process combines structure and creativity to move ideas forward with precision."
+  },
+
+  "process-steps": {
+    "first": {
+      "title": "Analysis",
+      "subtitle": "We study the property and the buyer profile to define the ideal strategy."
+    },
+    "second": {
+      "title": "Concept",
+      "subtitle": "Design proposals aligned with the luxury market and the investor's goals."
+    },
+    "third": {
+      "title": "Execution",
+      "subtitle": "Full setup with premium finishes and meticulous attention to detail."
+    },
+    "fourth": {
+      "title": "Presentation",
+      "subtitle": "Photography and audiovisual materials to showcase the property at its best."
+    },
+    "fifth": {
+      "title": "Results",
+      "subtitle": "Faster sales, higher margins, and increased profitability."
+    }
+  },
+
+  "final-cta": {
+    "title": "Make Your Property Stand Out",
+    "subtitle": "Take the next step and discover how our luxury home staging can boost your investment. Book your personalized consultation now."
   }
 }

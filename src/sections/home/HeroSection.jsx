@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import Button from "../../components/Button";
 
 const HeroSection = () => {
   const { t } = useTranslation(["home"]);
@@ -17,17 +18,17 @@ const HeroSection = () => {
 
         {/* Texto */}
         <div className="text-alabaster relative z-20">
-          <h2 className="text-xl uppercase">Sensorial Home Staging</h2>
+          <h2 className="text-xl md:text-2xl uppercase">
+            Sensorial Home Staging
+          </h2>
           <h1 className="text-4xl md:text-6xl md:uppercase">
             {t("hero.h1")} <br />
             {t("hero.h12")}
           </h1>
-          <p className="lg:w-1/5 my-8 leading-tight">
-            {t('hero.cta')}
-          </p>
+          <p className="lg:w-1/3 my-8 leading-tight text-lg">{t("hero.cta")}</p>
           <Link
             to="/contact"
-            className="bg-alabaster text-coyote rounded-4xl px-4 py-2 w-45 flex justify-center"
+            className="bg-alabaster text-coyote rounded-4xl text-xl px-6 py-3 w-60 flex justify-center"
           >
             {t("cta.contact")}
           </Link>

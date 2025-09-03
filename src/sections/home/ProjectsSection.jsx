@@ -54,9 +54,15 @@ const ProjectsSection = () => {
 
           {/* FLECHAS */}
           <div className="flex flex-col md:flex-row gap-12 justify-between">
-            <Button text={t("projects-btn.cta")} to="/projects" color="light"/>
+            <div className="hidden md:flex justify-center">
+              <Button
+                text={t("projects-btn.cta")}
+                to="/projects"
+                color="light"
+              />
+            </div>
 
-            <div className="embla__controls flex gap-6">
+            <div className="embla__controls flex justify-center gap-6">
               <PrevButton
                 onClick={onPrevButtonClick}
                 disabled={prevBtnDisabled}
@@ -92,11 +98,15 @@ const ProjectsSection = () => {
             ))}
           </div>
         </div>
+        
+        <div className="flex justify-center md:hidden">
+          <Button text={t("projects-btn.cta")} to="/projects" color="light" />
+        </div>
       </div>
 
-      <div className="pt-12 flex justify-center">
+      {/* <div className="pt-12 flex justify-center">
         <Button text={t("projects-btn.cta")} to="/projects" />
-      </div>
+      </div> */}
     </section>
   );
 };

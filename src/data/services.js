@@ -1,30 +1,28 @@
-import i18n from "i18next";
-
 import comprehensive from "../assets/images/services/comprehensive.webp";
 import visual from "../assets/images/services/visual-prod.webp";
 import financeable from "../assets/images/services/financeable-furniture.webp";
 import editorial from "../assets/images/services/editorial.webp";
 import sensory from "../assets/images/services/sensory.webp";
 
-export const getServices = () => [
+export const getServices = (t) => [
   {
     image: comprehensive,
-    title: i18n.t("services.1", { ns: "home" }),
+    title: t("list.1", { ns: "services" }),
   },
   {
     image: visual,
-    title: i18n.t("services.2", { ns: "home" }),
+    title: t("list.2", { ns: "services" }),
   },
   {
     image: financeable,
-    title: i18n.t("services.3", { ns: "home" }),
+    title: t("list.3", { ns: "services" }),
   },
   {
     image: editorial,
-    title: i18n.t("services.4", { ns: "home" }),
+    title: t("list.4", { ns: "services" }),
   },
   {
     image: sensory,
-    title: i18n.t("services.5", { ns: "home" }),
+    title: t("list.5", { ns: "services" }),
   },
 ];

@@ -8,7 +8,7 @@ const Button = ({ text, to, color = "dark" }) => {
   return (
     <Link
       to={to}
-      className={`${bgClass} rounded-4xl px-6 py-3`}
+      className={`${bgClass} rounded-4xl text-xl px-6 py-3 w-fit`}
     >
       {text}
     </Link>

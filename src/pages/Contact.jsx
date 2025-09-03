@@ -1,9 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { getServices } from "../data/services";
 
-const Services = () => {
-  const { t } = useTranslation(["services"]);
-  const services = getServices();
+const Contact = () => {
+  const { t } = useTranslation(["contact"]);
   return (
     <>
       {/* Metadata SEO */}
@@ -16,9 +14,9 @@ const Services = () => {
       />
 
       {/* Contenido de la pagina */}
-      <div>{services.map((service) => (service.title))}</div>
+      <div></div>
     </>
   );
 };
 
-export default Services;
+export default Contact;
