@@ -1,33 +1,42 @@
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
+import { paths } from "../utils/paths";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Footer = () => {
-  const { t, i18n } = useTranslation(["global"]);
+  const { t } = useTranslation(["global"]);
+  const location = useLocation();
+
+  const currentLang = location.pathname.startsWith("/en") ? "en" : "es";
 
   return (
     <div className="px-6 lg:px-12 pb-6 lg:pb-12">
       <div className="bg-coyote text-alabaster rounded-2xl px-6 py-6 flex flex-col justify-between">
-        <div
-          className="flex flex-col gap-6
-        text-center lg:text-start
-        items-center justify-center 
-        lg:flex-row lg:justify-between"
-        >
+        <div className="flex flex-col gap-6 text-center lg:text-start items-center justify-center lg:flex-row lg:justify-between">
           <ul className="text-lg lg:text-3xl">
             <span className="lg:hidden opacity-70 text-base">
               {t("footer.nav")}
             </span>
 
             <li>
-              <a href="/projects">{t("nav.projects")}</a>
+              <Link to={`/${currentLang}${paths[currentLang].projects}`}>
+                {t("nav.projects")}
+              </Link>
             </li>
             <li>
-              <a href="/services">{t("nav.services")}</a>
+              <Link to={`/${currentLang}${paths[currentLang].services}`}>
+                {t("nav.services")}
+              </Link>
             </li>
             <li>
-              <a href="/about">{t("nav.about")}</a>
+              <Link to={`/${currentLang}${paths[currentLang].about}`}>
+                {t("nav.about")}
+              </Link>
             </li>
             <li>
-              <a href="/contact">{t("nav.contact")}</a>
+              <Link to={`/${currentLang}${paths[currentLang].contact}`}>
+                {t("nav.contact")}
+              </Link>
             </li>
           </ul>
 
@@ -36,14 +45,15 @@ const Footer = () => {
               <span className="lg:hidden opacity-70">{t("cta.contact")}</span>
               <ul className="text-lg">
                 <li>
-                  <a href="/">contact@stagemediterraneo.com</a>
+                  <a href="mailto:contact@stagemediterraneo.com">
+                    contact@stagemediterraneo.com
+                  </a>
                 </li>
                 <li>+34 600 000 000</li>
               </ul>
             </div>
 
             <div className="flex flex-col">
-              <span></span>
               <ul className="text-lg">
                 <li>Colón 13</li>
                 <li>46004 Valencia España</li>
@@ -63,19 +73,7 @@ const Footer = () => {
 
         <div className="lg:text-lg">
           <div className="flex gap-2 justify-center lg:justify-end lg:pb-3 py-6">
-            <button
-              onClick={() => i18n.changeLanguage("es")}
-              className={i18n.language === "es" ? "font-bold" : ""}
-            >
-              es
-            </button>
-            <p>|</p>
-            <button
-              onClick={() => i18n.changeLanguage("en")}
-              className={i18n.language === "en" ? "font-bold" : ""}
-            >
-              en
-            </button>
+            <LanguageSwitcher />
           </div>
 
           <div className="lg:flex justify-between">
@@ -83,13 +81,19 @@ const Footer = () => {
             <ul className="flex flex-col lg:flex-row lg:gap-12 text-center justify-center">
               <li>© Stagè Mediterráneo</li>
               <li>
-                <a href="/legal-">{t("footer.legal")}</a>
+                <Link to={`/${currentLang}${paths[currentLang].legal}`}>
+                  {t("footer.legal")}
+                </Link>
               </li>
               <li>
-                <a href="/privacy-policy">{t("footer.privacy")}</a>
+                <Link to={`/${currentLang}${paths[currentLang].privacy}`}>
+                  {t("footer.privacy")}
+                </Link>
               </li>
               <li>
-                <a href="/cookies-policy">{t("footer.cookies")}</a>
+                <Link to={`/${currentLang}${paths[currentLang].cookies}`}>
+                  {t("footer.cookies")}
+                </Link>
               </li>
             </ul>
 

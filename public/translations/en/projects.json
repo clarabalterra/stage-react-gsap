@@ -1,13 +1,11 @@
 {
   "seo": {
-    "title": "Home Staging Projects | Success Stories by Stagè Mediterráneo",
-    "description": "Discover real examples of homes transformed through sensory home staging. Get inspired by our projects and see how we attract buyers and close deals faster."
+    "title": "Projects | Stagè Mediterráneo",
+    "description": "Explore real projects of homes transformed with our sensory home staging. Get inspired by examples that show how to attract buyers and increase profitability."
   },
 
-  "title": {
-    "title": "Nuestros proyectos de Home Staging Sensorial",
-    "subtitle": "Cada propiedad cuenta una historia de transformación: del espacio vacío al activo que genera"
-  },
+  "title": "Our Sensory Home Staging Projects",
+  "subtitle": "Each property tells a story of transformation: from an empty space to a generating asset.",
 
   "filter": {
     "all": "All Properties",
@@ -15,5 +13,12 @@
     "houses": "Houses",
     "empty": "Empty",
     "furnished": "Furnished"
-  }
+  },
+
+  "cta": {
+    "title": "At Stagè, every project is an opportunity to create something unique",
+    "subtitle": "If you have a space in mind or a challenge to share, we're here to listen. Let's talk and shape your next story together."
+  },
+
+  "btn": "Contact us"
 }

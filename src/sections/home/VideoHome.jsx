@@ -1,6 +1,6 @@
 const VideoHome = () => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center lg:px-12">
       <div
         className="bg-coyote 
     h-[calc(100vh-3rem)] lg:h-[calc(100vh-6rem)] 

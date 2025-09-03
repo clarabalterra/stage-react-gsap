@@ -7,10 +7,18 @@ import ProjectsSection from "../sections/home/ProjectsSection";
 import ServicesSection from "../sections/home/ServicesSection";
 import VideoHome from "../sections/home/VideoHome";
 import FinalCta from "../sections/home/FinalCta";
-import TitleSubtitle from "../components/TitleSubtitle";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const Home = () => {
-  const { t } = useTranslation(["home"]);
+  const { t, i18n } = useTranslation(["home"]);
+
+  const { lang } = useParams();
+  useEffect(() => {
+    if (lang && i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+    }
+  }, [lang, i18n]);
 
   return (
     <>

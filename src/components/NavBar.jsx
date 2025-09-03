@@ -10,6 +10,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import logo from "../assets/stage-h.svg";
+import { paths } from "../utils/paths";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,12 +21,12 @@ const NavBar = () => {
   const mobileMenuRef = useRef(null);
   const headerRef = useRef(null);
 
+  const currentLang = i18n.language || "es";
+
   // Animación del menú móvil
   useEffect(() => {
     if (!mobileMenuRef.current) return;
-
     if (isOpen) {
-      // Aseguramos que empieza oculto para evitar flash
       gsap.set(mobileMenuRef.current, { height: 0, opacity: 0 });
       gsap.to(mobileMenuRef.current, {
         height: "auto",
@@ -53,12 +55,10 @@ const NavBar = () => {
         setIsOpen(false);
       }
     };
-
     if (isOpen) {
       document.addEventListener("mousedown", handleClickOutside);
       document.addEventListener("touchstart", handleClickOutside);
     }
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("touchstart", handleClickOutside);
@@ -99,38 +99,29 @@ const NavBar = () => {
       <div className="grid grid-cols-3 backdrop-blur-xs rounded-full px-6 py-3 bg-coyote/40 text-lg">
         {/* Logo */}
         <div className="flex items-start pb-1 lg:pt-2">
-          <a href="/">
+          <Link to={`/${currentLang}${paths[currentLang].home}`}>
             <img src={logo} alt="Logo Stage Mediterraneo" className="h-8" />
-          </a>
+          </Link>
         </div>
 
         {/* Nav desktop */}
         <div className="hidden lg:flex gap-4 items-center justify-self-center text-center">
-          <a href="/projects">{t("nav.projects")}</a>
-          <a href="/services">{t("nav.services")}</a>
-          <a href="/about">{t("nav.about")}</a>
+          <Link to={`/${currentLang}${paths[currentLang].projects}`}>
+            {t("nav.projects")}
+          </Link>
+          <Link to={`/${currentLang}${paths[currentLang].services}`}>
+            {t("nav.services")}
+          </Link>
+          <Link to={`/${currentLang}${paths[currentLang].about}`}>
+            {t("nav.about")}
+          </Link>
         </div>
 
         {/* Lang y CTA desktop */}
         <div className="hidden lg:flex gap-4 justify-self-end items-center">
-          <div className="flex gap-2">
-            <button
-              onClick={() => i18n.changeLanguage("es")}
-              className={i18n.language === "es" ? "font-bold" : ""}
-            >
-              es
-            </button>
-            <span>|</span>
-            <button
-              onClick={() => i18n.changeLanguage("en")}
-              className={i18n.language === "en" ? "font-bold" : ""}
-            >
-              en
-            </button>
-          </div>
-
+          <LanguageSwitcher />
           <Link
-            to="/contact"
+            to={`/${currentLang}${paths[currentLang].contact}`}
             className="bg-alabaster text-coyote rounded-4xl text-xl px-6 py-3 w-60 flex justify-center"
           >
             {t("cta.contact")}
@@ -150,40 +141,24 @@ const NavBar = () => {
       <div
         ref={mobileMenuRef}
         className="lg:hidden overflow-hidden flex flex-col gap-3 bg-alabaster text-coyote rounded-2xl px-4 py-4 mt-3"
-        style={{ height: 0, opacity: 0 }} // evita flash al recargar
+        style={{ height: 0, opacity: 0 }}
       >
-        <div className="grid grid-cols-3">
-          <a href="/projects" className="col-start-1 justify-self-start">
-            {t("nav.projects")}
-          </a>
-          <a href="/services" className="col-start-2 justify-self-center">
-            {t("nav.services")}
-          </a>
-          <a href="/about" className="col-start-3 justify-self-end">
-            {t("nav.about")}
-          </a>
-        </div>
+        <Link to={`/${currentLang}${paths[currentLang].projects}`}>
+          {t("nav.projects")}
+        </Link>
+        <Link to={`/${currentLang}${paths[currentLang].services}`}>
+          {t("nav.services")}
+        </Link>
+        <Link to={`/${currentLang}${paths[currentLang].about}`}>
+          {t("nav.about")}
+        </Link>
 
         {/* Lang mobile */}
-        <div className="flex gap-2">
-          <button
-            onClick={() => i18n.changeLanguage("es")}
-            className={i18n.language === "es" ? "font-bold" : ""}
-          >
-            ES
-          </button>
-          <p>|</p>
-          <button
-            onClick={() => i18n.changeLanguage("en")}
-            className={i18n.language === "en" ? "font-bold" : ""}
-          >
-            EN
-          </button>
-        </div>
+        <LanguageSwitcher />
 
         {/* CTA mobile */}
         <Link
-          to="/contact"
+          to={`/${currentLang}${paths[currentLang].contact}`}
           className="bg-coyote text-alabaster rounded-4xl px-4 py-2 flex justify-center"
         >
           {t("cta.contact")}

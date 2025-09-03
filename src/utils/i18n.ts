@@ -1,6 +1,8 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+
 import LanguageDetector from "i18next-browser-languagedetector";
+
 import Backend from "i18next-http-backend";
 
 i18n
@@ -8,9 +10,9 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    debug: true,
+    debug: false,
     fallbackLng: "es",
-    ns: ["global"],
+    ns: ["global", "home", "projects", "services", "about", "contact"],
     defaultNS: "global",
     backend: {
       loadPath: "/translations/{{lng}}/{{ns}}.json",
