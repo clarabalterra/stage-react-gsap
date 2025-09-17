@@ -5,5 +5,12 @@
   },
 
   "title": "Conversemos sobre tu próxima inversión",
-  "subtitle": "Cuéntanos sobre tu propiedad o proyecto y descubre cómo el home staging sensorial de lujo puede maximizar su valor en el mercado."
+  "subtitle": "Cuéntanos sobre tu propiedad o proyecto y descubre en un primer meeting gratuito cómo el home staging sensorial de lujo puede maximizar su valor en el mercado.",
+
+  "forms": {
+    "name": "Nombre completo",
+    "email": "ejemplo@mail.com",
+    "message": "Déjanos tu disponibilidad para agendar un meeting.",
+    "submit": "Enviar"
+  }
 }

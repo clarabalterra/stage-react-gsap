@@ -9,6 +9,7 @@ import VideoHome from "../sections/home/VideoHome";
 import FinalCta from "../sections/home/FinalCta";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import ImageComparison from "../sections/home/ImageComparison";
 
 const Home = () => {
   const { t, i18n } = useTranslation(["home"]);
@@ -46,6 +47,10 @@ const Home = () => {
 
       <div className="py-24">
         <ProjectsSection />
+      </div>
+
+      <div className="py-24">
+        <ImageComparison />
       </div>
 
       <div className="py-24">

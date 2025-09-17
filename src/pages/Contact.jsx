@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import TitleSubtitle from "../components/TitleSubtitle";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import Forms from "../sections/contact/Forms";
 
 const Contact = () => {
   const { t, i18n } = useTranslation(["contact"]);
@@ -23,10 +24,10 @@ const Contact = () => {
       />
 
       {/* Contenido de la pagina */}
-      <div></div>
-      <div className="pt-36 lg:pt-48 pb-24">
+      <div className="pt-36 lg:pt-48 pb-12">
         <TitleSubtitle title={t("title")} subtitle={t("subtitle")} />
       </div>
+      <Forms />
     </>
   );
 };

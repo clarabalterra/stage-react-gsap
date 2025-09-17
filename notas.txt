@@ -1,3 +1,6 @@
 calendario para administrar meetings: https://calendly.com/es
 
 forms: https://formsubmit.co/
+
+hostear: npm run dev -- --host
+

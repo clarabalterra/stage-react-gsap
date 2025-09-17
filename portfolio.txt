@@ -1,0 +1,33 @@
+const Portfolio = () => {
+  return (
+    <div className="bg-[#333333] flex items-center justify-center h-screen">
+      <div className="h-[calc(100vh-2rem)] w-[calc(100vw-2rem)] rounded-xl bg-white text-[#333333] px-12 py-12">
+        <h1 className="text-8xl font-coral">lorem ipsum</h1>
+        <p className="text-lg font-manrope">Lorem ipsum dolor sit amet</p>
+      </div>
+    </div>
+  );
+};
+
+export default Portfolio;
+
+@theme {
+  --color-coyote: #7a6653;
+  --color-alabaster: #eae6df;
+  --font-coral: "Coral Pixel", serif;
+  --font-manrope: "Manrope", sans-serif;
+}
+
+@font-face {
+  font-family: "Coral Pixel";
+  src: url("./assets/fonts/CoralPixels-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -5,5 +5,12 @@
   },
 
   "title": "Let's Talk About Your Next Investment",
-  "subtitle": "Tell us about your property or project and discover how luxury sensory home staging can maximize its market value."
+  "subtitle": "Tell us about your property or project and discover in a free initial meeting how luxury sensory home staging can maximize its market value.",
+
+  "forms": {
+    "name": "Full Name",
+    "email": "example@mail.com",
+    "message": "Let us know your availability to arrange a meeting",
+    "submit": "Submit"
+  }
 }

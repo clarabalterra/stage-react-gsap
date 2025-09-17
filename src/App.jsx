@@ -10,7 +10,7 @@ import Projects from "./pages/Projects";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 
-import { paths } from "./utils/paths"; // Importamos los slugs traducidos
+import { paths } from "./utils/paths"; // Slugs traducidos
 
 const App = () => {
   return (

@@ -21,7 +21,9 @@ const NavBar = () => {
   const mobileMenuRef = useRef(null);
   const headerRef = useRef(null);
 
-  const currentLang = i18n.language || "es";
+  const currentLang = ["es", "en"].includes(i18n.language)
+    ? i18n.language
+    : "es";
 
   // Animación del menú móvil
   useEffect(() => {
@@ -99,7 +101,7 @@ const NavBar = () => {
       <div className="grid grid-cols-3 backdrop-blur-xs rounded-full px-6 py-3 bg-coyote/40 text-lg">
         {/* Logo */}
         <div className="flex items-start pb-1 lg:pt-2">
-          <Link to={`/${currentLang}${paths[currentLang].home}`}>
+          <Link to={`/${currentLang}${paths[currentLang]?.home || "/"}`}>
             <img src={logo} alt="Logo Stage Mediterraneo" className="h-8" />
           </Link>
         </div>
